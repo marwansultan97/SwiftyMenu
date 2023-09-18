@@ -154,6 +154,7 @@ extension SwiftyMenu: UITableViewDataSource {
         cell.textLabel?.text = items[indexPath.row].displayableValue
         cell.textLabel?.textColor = attributes.textStyle.textStyleValues.color
         cell.textLabel?.font = attributes.textStyle.textStyleValues.font
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
         cell.tintColor = attributes.textStyle.textStyleValues.color
         cell.backgroundColor = attributes.rowStyle.rowStyleValues.backgroundColor
         cell.selectionStyle = .none
@@ -277,7 +278,9 @@ extension SwiftyMenu {
             selectButton.layoutIfNeeded()
         }
         selectButton.titleLabel?.font = attributes.textStyle.textStyleValues.font
+        selectButton.titleLabel?.adjustsFontSizeToFitWidth = true
 
+        
         selectButton.imageEdgeInsets.right = width - 16
         selectButton.imageEdgeInsets.left = width - 16
         
